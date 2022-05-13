@@ -16,18 +16,18 @@ function Sidebar() {
     <Flex
       pos={"sticky"}
       // left="5"
-      h={"95vh"}
-      marginTop="2.5vh"
+      h={"100vh"}
+      // marginTop="2.5vh"
       boxShadow="0 4px 12px 0 rgba(0,0,0,0.05)"
-      borderRadius={navSize == "small" ? "15px" : "30px"}
-      w={navSize == "small" ? "75px" : "200px"}
+      borderRadius={navSize === "small" ? "15px" : "30px"}
+      w={navSize === "small" ? "75px" : "300px"}
       flexDirection="column"
       justifyContent={"space-between"}
     >
       <Flex
         p={"5%"}
         flexDir="column"
-        alignItems={navSize == "small" ? "center" : "flex-start"}
+        alignItems={navSize === "small" ? "center" : "flex-start"}
         as="nav"
       >
         <IconButton
@@ -36,7 +36,7 @@ function Sidebar() {
           _hover={{ background: "none" }}
           icon={<MdMenu />}
           onClick={() => {
-            if (navSize == "small") changeNavSize("large");
+            if (navSize === "small") changeNavSize("large");
             else changeNavSize("small");
           }}
         />
@@ -45,7 +45,6 @@ function Sidebar() {
           icon={MdOutlineEditNote}
           title="Notes"
           description="Hello"
-          active
         />
       </Flex>
 
@@ -53,16 +52,16 @@ function Sidebar() {
         p="5%"
         flexDirection="column"
         w="100%"
-        alignItems={navSize == "small" ? "center" : "flex-start"}
+        alignItems={navSize === "small" ? "center" : "flex-start"}
         mb="4"
       >
-        <Divider display={navSize == "small" ? "none" : "flex"} />
+        <Divider display={navSize === "small" ? "none" : "flex"} />
         <Flex mt={4} align="center">
           <Avatar size="sm" />
           <Flex
             flexDir="column"
             ml={4}
-            display={navSize == "small" ? "none" : "flex"}
+            display={navSize === "small" ? "none" : "flex"}
           >
             <Heading as="h3" size="sm">
               Lourem ipsum

@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, HStack, Text, VStack } from "@chakra-ui/react";
+import { Divider, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import AddnewBtn from "./AddnewBtn";
 import Addnew from "./Addnew";
 import Heading from "./Heading";
@@ -10,13 +10,17 @@ function Notes() {
     <>
       <HStack>
         <Sidebar mr={4} />
-        <HStack>
-          <Text fontSize="5xl" p={4}>
-            Notes
-          </Text>
-          <AddnewBtn />
-        </HStack>
-        <Divider borderColor="gray.400" />
+        <Flex direction="column" alignItems="flex-start">
+          <HStack>
+            <Text fontSize="5xl" p={4}>
+              Notes
+            </Text>
+            <AddnewBtn />
+          </HStack>
+          <Divider borderColor="gray.400" />
+          <Heading />
+          <Addnew />
+        </Flex>
       </HStack>
     </>
   );
